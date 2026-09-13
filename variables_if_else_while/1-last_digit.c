@@ -20,18 +20,18 @@ int main(void)
 	/* your code goes there */
 	last_digit = n % 10;
 
-	if (last_digit < 0)
-		last_digit = -last_digit;
-
 	printf("Last digit of %d is %d ", n, last_digit);
 
-	switch ((last_digit > 5) - (last_digit < 6 && last_digit > 0))
+	switch (last_digit)
 	{
-	case 1:
-		printf("and is greater than 5\n");
-		break;
 	case 0:
 		printf("and is 0\n");
+		break;
+	case 6:
+	case 7:
+	case 8:
+	case 9:
+		printf("and is greater than 5\n");
 		break;
 	default:
 		printf("and is less than 6 and not 0\n");
