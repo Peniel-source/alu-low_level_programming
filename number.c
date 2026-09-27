@@ -25,43 +25,43 @@
 
 
 
-int main() {
-  const long N = 100000000;
+// int main() {
+//   const long N = 100000000;
 
-  clock_t start, end;
-  double time_taken;
+//   clock_t start, end;
+//   double time_taken;
 
-  // for loop
-  start = clock();
+//   // for loop
+//   start = clock();
 
-  long sum1 = 0;
-  for (long i = 0; i < N; i++) {
-    sum1 += i;
-  }
+//   long sum1 = 0;
+//   for (long i = 0; i < N; i++) {
+//     sum1 += i;
+//   }
 
-  end = clock();
-  time_taken = (double)(end - start) / CLOCKS_PER_SEC;
+//   end = clock();
+//   time_taken = (double)(end - start) / CLOCKS_PER_SEC;
 
-  printf("for loop: %f seconds\n", time_taken);
+//   printf("for loop: %f seconds\n", time_taken);
 
-  // while loop
-  start = clock();
+//   // while loop
+//   start = clock();
 
-  long sum2 = 0;
-  long i = 0;
+//   long sum2 = 0;
+//   long i = 0;
 
-  while (i < N) {
-    sum2 += i;
-    i++;
-  }
+//   while (i < N) {
+//     sum2 += i;
+//     i++;
+//   }
 
-  end = clock();
-  time_taken = (double)(end - start) / CLOCKS_PER_SEC;
+//   end = clock();
+//   time_taken = (double)(end - start) / CLOCKS_PER_SEC;
 
-  printf("while loop: %f seconds\n", time_taken);
+//   printf("while loop: %f seconds\n", time_taken);
 
-  return 0;
-}
+//   return 0;
+// }
 
 // int main(void)
 // {
@@ -91,4 +91,48 @@ int main() {
 // 	}
 
 // 	return(0);
+// }
+
+
+
+// int multiply(int a, int b)
+// {
+//   return (a * b);
+// }
+
+// int main(void)
+// {
+//   int result;
+
+//   result = multiply(10, 20);
+
+//   printf("%d\n", result);
+
+//   return (0);
+// }
+
+
+
+int main(void)
+{
+  int result1 = sum_recursive(5);
+  printf(result1);
+  return(0);
+}
+
+int sum_recursive(int n)
+{
+  if (n <= 0)
+    return (0);
+
+
+  return(n + sum_recursive(n - 1));
+}
+
+
+// int sum = 0;
+
+// for (i = 1; i <= 5; i++)
+// {
+//   sum+= i;
 // }
